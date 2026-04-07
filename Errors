@@ -1,0 +1,20 @@
+ERROR:
+desktop_all.min.js?v=24.2.15:5 Uncaught RangeError: Maximum call stack size exceeded
+    at String.replace (<anonymous>)
+    at w.se [as find] (desktop_all.min.js?v=24.2.15:5:7115)
+    at HTMLBodyElement.handlers (desktop_all.min.js?v=24.2.15:5:43587)
+    at HTMLBodyElement.dispatch (desktop_all.min.js?v=24.2.15:5:42819)
+    at v.handle (desktop_all.min.js?v=24.2.15:5:41120)
+    at Object.trigger (desktop_all.min.js?v=24.2.15:5:71782)
+    at HTMLInputElement.<anonymous> (desktop_all.min.js?v=24.2.15:5:72378)
+    at w.each (desktop_all.min.js?v=24.2.15:5:3002)
+    at w.fn.init.each (desktop_all.min.js?v=24.2.15:5:1482)
+    at w.fn.init.trigger (desktop_all.min.js?v=24.2.15:5:72353)
+
+Description:
+The error occurred after selecting the Null Display Value for a Popup LOV field.
+
+Cause & Solution:
+The Additional Outputs field in the page item properties was too long. Reducing it by removing unnecessary outputs resolved the issue.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
