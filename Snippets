@@ -1,6 +1,20 @@
--- Triggers all client-side validations
+-- Triggers all client-side validations.
 if (apex.page.validate()) {
     return true;
 } else {
     return false;
+}
+
+-- Similar function but manually with custom message.
+apex.message.clearErrors();
+const username = $v("P9999_USERNAME");
+let errors = [];
+if (!username) {
+  errors.push({
+    type: "error",
+    location: ["inline"],
+    pageItem: "P9999_USERNAME",
+    message: "Unesite korisničko ime.",
+    unsafe: false
+  });
 }
