@@ -1,1 +1,6 @@
-
+-- Triggers all client-side validations
+if (apex.page.validate()) {
+    return true;
+} else {
+    return false;
+}
